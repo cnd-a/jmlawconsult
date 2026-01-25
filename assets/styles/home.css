@@ -1,0 +1,209 @@
+:root {
+  --fs-h1: clamp(1.6rem, 3.5vw, 2.6rem);
+  --fs-h2: clamp(1.25rem, 2.5vw, 1.8rem);
+  --fs-h3: clamp(1.05rem, 1.6vw, 1.25rem);
+  --fs-body: clamp(0.85rem, 1.1vw, 0.95rem);
+  --fs-small: clamp(0.75rem, 0.9vw, 0.85rem);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(228, 179, 93, 0.35);
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(180, 180, 180, 0.35);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(228, 179, 93, 0.65) transparent;
+}
+
+html,
+body {
+  cursor: url('../images/cursor3.png'), auto;
+  scroll-behavior:smooth;
+  scroll-snap-type: y proximity;
+}
+
+p {
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  color: #FFC735;
+}
+
+.content{
+  color: #C6C6C6;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: var(--fs-h1);
+  padding: 1.25rem;
+  gap: 10px;
+  background-color: #202020;
+}
+
+.hero h1{
+  font-size: 42px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.hero button{
+  color:#FFFFFF;
+  padding: 1.25rem;
+  margin: 1.25rem;
+  background-color: #FFC735;
+  width: 100%;
+  max-width: 15rem;
+}
+
+.hero img{
+  width: 100%;
+  max-width: 20rem;
+  height: 25rem;
+}
+
+
+.layanan{
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: var(--fs-h2);
+  justify-content: center;
+  align-items: center;
+}
+
+.service-list{
+  display: flex;
+  gap: 1rem;
+}
+
+.service-card {
+  font-size: var(--fs-body);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #202020;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  width: 260px;
+}
+
+.service-card h3 {
+  font-size: var(--fs-h3);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.service-card p {
+  font-size: var(--fs-body);
+  transition: all 0.4s ease;
+  color: #C8C8C8;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.layanan h2{
+  font-size: 24px;
+  
+}
+
+.tentang-kami{
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #EAEAEA;
+}
+
+.tentang-kami img{
+  max-width: 20rem;
+  width: 100%;
+  height: 25rem;
+}
+
+@media (max-width: 768px) {
+
+  .hero h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hero img {
+    height: auto;
+    max-width: 18rem;
+  }
+
+  .service-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tentang-kami img {
+    height: auto;
+    max-width: 18rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero button {
+    padding: 1rem;
+    margin: 0.75rem 0;
+  }
+
+  .layanan h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .service-card p {
+    font-size: 0.85rem;
+  }
+}
