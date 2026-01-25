@@ -34,9 +34,9 @@
 
 html,
 body {
-  cursor: url('../images/cursor3.png'), auto;
+  /* cursor: url('../images/cursor3.png'), auto; */
   scroll-behavior:smooth;
-  scroll-snap-type: y proximity;
+  /* scroll-snap-type: y proximity; */
 }
 
 p {
