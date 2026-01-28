@@ -4,9 +4,10 @@
 }
 
 .site-footer {
+  justify-items: center;
   background-color: #1e1e1e;
   color: #cfcfcf;
-  align-content: space-between;
+  align-content: space-around;
 }
 
 .site-footer a{
@@ -15,6 +16,7 @@
 }
 
 .footer-inner {
+  text-align: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1.5rem 2rem;
@@ -68,7 +70,7 @@
   }
 
   .footer-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
     justify-items: center;
   }
