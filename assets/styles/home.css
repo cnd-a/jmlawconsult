@@ -105,18 +105,39 @@ a{
 .service-list{
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .service-card {
+  position: relative;
   font-size: var(--fs-body);
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   background: #202020;
   border-radius: 1rem;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem;
   width: 260px;
+  min-height: 260px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.service-card:active {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.service-card img,
+.service-card h3 {
+  position: relative;
+  z-index: 2;
+  transition: opacity 0.3s ease;
 }
 
 .service-card h3 {
@@ -127,11 +148,33 @@ a{
 }
 
 .service-card p {
-  font-size: var(--fs-body);
-  transition: all 0.4s ease;
+  position: absolute;
+  inset: 0;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.88);
   color: #C8C8C8;
   font-size: 0.9rem;
+  line-height: 1.5;
   text-align: left;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.service-card:hover p,
+.service-card:active p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-card:hover img,
+.service-card:hover h3,
+.service-card:active img,
+.service-card:active h3 {
+  opacity: 0;
 }
 
 .layanan h2{
