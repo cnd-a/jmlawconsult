@@ -37,6 +37,7 @@ body {
   /* cursor: url('../images/cursor3.png'), auto; */
   scroll-behavior:smooth;
   /* scroll-snap-type: y proximity; */
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 p {
@@ -52,6 +53,36 @@ a{
 .section-title {
   font-size: var(--fs-h2);
   color: #FFC735;
+  text-align: center;
+  position: relative;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.section-title::before,
+.section-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30rem;
+  height: 2px;
+  background-color: #f5a623;
+  transform: translateY(0%);
+}
+
+.section-title::before {
+  left: 0;
+}
+
+.section-title::after {
+  right:0;
+}
+
+.section-title span {
+  background-color: white;
+  padding: 0 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .content{
@@ -60,34 +91,52 @@ a{
 
 .hero{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   font-size: var(--fs-h1);
   padding: 1.25rem;
-  gap: 10px;
+  gap: 25px;
   background-color: #202020;
+}
+
+.hero-subtitle{
+  font-size: var(--fs-h2);
+  color: #FFC735;
+}
+
+.left-hero{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  /* align-content: left; */
 }
 
 .hero h1{
   font-size: 42px;
   color: #FFFFFF;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.hero p{
+  font-size: 14px;
 }
 
 .hero button{
   color:#FFFFFF;
   padding: 1.25rem;
-  margin: 1.25rem;
-  background-color: #FFC735;
+  margin: 1.25rem 0 1.25rem 0 ;
+  background-color: transparent;
+  border-color: white;
   width: 100%;
   max-width: 15rem;
 }
 
 .hero img{
   width: 100%;
-  max-width: 20rem;
-  height: 25rem;
+  max-width: 30rem;
+  height: 38rem;
 }
 
 
@@ -100,6 +149,16 @@ a{
   font-size: var(--fs-h2);
   justify-content: center;
   align-items: center;
+}
+
+.layanan button{
+  color:black;
+  padding: 1.25rem;
+  margin: 1.25rem 0 1.25rem 0 ;
+  background-color: transparent;
+  border-color: black;
+  width: 100%;
+  max-width: 100vh;
 }
 
 .service-list{
@@ -179,7 +238,12 @@ a{
 
 .layanan h2{
   font-size: 24px;
-  
+}
+
+.akreditasi{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tentang-kami{
@@ -197,7 +261,20 @@ a{
   height: 25rem;
 }
 
+.tentang-kami span{
+  background-color: #EAEAEA;
+}
+
 @media (max-width: 768px) {
+
+  .hero{
+    flex-direction: column;
+  }
+
+  .left-hero{
+  align-items: center;
+  text-align: center;
+}
 
   .hero h1 {
     font-size: 32px;
@@ -208,6 +285,11 @@ a{
     height: auto;
     max-width: 18rem;
   }
+
+  .section-title::before,
+  .section-title::after {
+  width: 10em;
+}
 
   .service-list {
     flex-direction: column;
@@ -227,7 +309,6 @@ a{
   }
 }
 
-/* Small phones */
 @media (max-width: 480px) {
 
   .hero {
