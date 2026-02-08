@@ -78,7 +78,13 @@ header.is-sidebar .logo {
   justify-content: space-between;
   align-items: center;
   padding: 1.56rem 2rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+}
+
+.nav-container{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo {
@@ -107,8 +113,60 @@ header.is-sidebar .logo {
   border-bottom: 2px solid #e4b35d;
 }
 
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: auto;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: black;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+
+/* animation for burger */
+header.menu-open .burger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+header.menu-open .burger span:nth-child(2) {
+  opacity: 0;
+}
+
+header.menu-open .burger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
 
 @media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-container{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  header.menu-open .nav-links {
+    display: flex;
+  }
+
   header.is-sidebar {
     position: relative;
     width: 100%;

@@ -65,6 +65,25 @@ async function loadPartials() {
 
   setActiveNav();
   setFooterDate();
+  initBurgerMenu();
+}
+
+function initBurgerMenu() {
+  const header = document.querySelector("header");
+  const burger = document.querySelector(".burger");
+
+  if (!header || !burger) return;
+
+  burger.addEventListener("click", () => {
+    header.classList.toggle("menu-open");
+  });
+
+
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+      header.classList.remove("menu-open");
+    });
+  });
 }
 
 function setActiveNav() {

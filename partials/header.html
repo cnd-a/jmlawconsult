@@ -1,14 +1,19 @@
 <body>
   <div class="cover-container">
-    <header class="navbar">
-      <div class="logo">JM Law Consult</div>
-      <nav>
-        <ul class="nav-links">
-          <!-- <li><a href="index.html" class="<%= currentPage === 'home' ? 'active' : '' %>">Home</a></li> -->
-          <!-- <li><a href="/features" class="<%= currentPage === 'features' ? 'active' : '' %>">Services</a></li> -->
-          <!-- <li> <a href="contact.html" class="<%= currentPage === 'contact' ? 'active' : '' %>">Contact</a></li> -->
-          <li><a href="index.html" data-page="home">Beranda</a></li>
-          <li><a href="contact.html" data-page="contact">Kontak</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header class="navbar">
+    <div class="logo">JM Law Consult</div>
+    
+    <div class="nav-container">
+      <button class="burger" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="home">Beranda</a></li>
+        <li><a href="contact.html" data-page="contact">Kontak</a></li>
+      </ul>
+    </nav>
+</header>

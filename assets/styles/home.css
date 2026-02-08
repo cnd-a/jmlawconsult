@@ -33,11 +33,17 @@
 }
 
 html,
-body {
+body, button, a {
   /* cursor: url('../images/cursor3.png'), auto; */
   scroll-behavior:smooth;
   /* scroll-snap-type: y proximity; */
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  letter-spacing: -0.02em;
 }
 
 p {
@@ -98,7 +104,9 @@ a{
   font-size: var(--fs-h1);
   padding: 1.25rem;
   gap: 25px;
-  background-color: #202020;
+  background-image: url("../images/Home\ -\ Hero.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-subtitle{
@@ -123,7 +131,7 @@ a{
   font-size: 14px;
 }
 
-.hero button{
+.hero a{
   color:#FFFFFF;
   padding: 1.25rem;
   margin: 1.25rem 0 1.25rem 0 ;
@@ -131,6 +139,19 @@ a{
   border-color: white;
   width: 100%;
   max-width: 15rem;
+  border: 2px solid #ffffff62;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+
+  transition: ease-in-out 1s;
+}
+
+.hero a:hover {
+  /* box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px); */
+  border: 2px solid #ffffff;
+  transition:ease-in-out 2ms;
 }
 
 .hero img{
@@ -176,14 +197,40 @@ a{
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #202020;
+  /* background: black; */
+  background-position: center;
+  background-size: cover;
   border-radius: 1rem;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
   width: 260px;
   min-height: 260px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card.I{
+  background: linear-gradient(
+  to bottom,
+  rgba(0,0,0,0.65),
+  rgba(0,0,0,0.35)
+  ), url("../images/Litigasi.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.service-card.II{
+  background-image:linear-gradient(
+  to bottom,
+  rgba(0,0,0,0.65),
+  rgba(0,0,0,0.35)
+  ), url(../images/Pertambangan.jpg);
+}
+.service-card.III{
+  background-image:linear-gradient(
+  to bottom,
+  rgba(0,0,0,0.65),
+  rgba(0,0,0,0.35)
+  ), url(../images/Ketenagakerjaan.jpg);
 }
 
 .service-card:hover,
@@ -288,7 +335,7 @@ a{
 
   .section-title::before,
   .section-title::after {
-  width: 10em;
+    width: 10em;
 }
 
   .service-list {
